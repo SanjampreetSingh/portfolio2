@@ -1,12 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import App from "./App";
+// Material-UI
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+
+import App from "./components/App";
+
+import theme from "./assets/js/theme";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+      <CssBaseline />
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );

@@ -1,5 +1,7 @@
+import AboutPage from "../sections/About/about-page";
+
 function App() {
-  return <>h1</>;
+  return <AboutPage />;
 }
 
 export default App;

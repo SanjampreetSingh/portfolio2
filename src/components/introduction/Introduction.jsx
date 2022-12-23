@@ -18,7 +18,7 @@ export default function Introduction() {
     <Stack
       direction={["column-reverse", "row"]}
       spacing="24px"
-      style={{ alignItems: "center", marginTop: "4rem" }}
+      style={{ alignItems: "center"}}
     >
       <VStack align="stretch" style={{ width: "50vw" }}>
         <Heading

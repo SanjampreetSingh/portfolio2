@@ -1,62 +1,44 @@
 import {
   Box,
   Flex,
-  Avatar,
   Button,
-  Menu,
-  MenuButton,
   Stack,
   useColorMode,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { BsCommand } from "react-icons/bs";
+
+import Search from "../search/Search";
+import "./header.css";
 
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <nav
-      style={{
-        zIndex: 1500,
-        marginBottom: "4rem",
-        position: "sticky",
-        top: 0,
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        right: "0xp",
-        left: "0px",
-      }}
-    >
-      <Box
-        px={4}
-        style={{ width: "100%" }}
-        bg={colorMode === "light" ? "white" : "#1A202C"}
-      >
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <Box>Logo</Box>
-          <Flex alignItems={"center"}>
-            <Stack direction={"row"} spacing={7}>
-              <Button onClick={toggleColorMode}>
-                {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-              </Button>
-
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  rounded={"full"}
-                  variant={"link"}
-                  cursor={"pointer"}
-                  minW={0}
-                >
-                  <Avatar
-                    size={"sm"}
-                    src={"https://avatars.dicebear.com/api/male/username.svg"}
-                  />
-                </MenuButton>
-              </Menu>
-            </Stack>
+    <>
+      <nav className="nav-style">
+        <Box
+          px={4}
+          style={{ width: "100%" }}
+          bg={colorMode === "light" ? "white" : "#1A202C"}
+        >
+          <Search isOpen={isOpen} onClose={onClose} />
+          <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+            <Box>Logo</Box>
+            <Flex alignItems={"center"}>
+              <Stack direction={"row"} spacing={7}>
+                <Button onClick={toggleColorMode}>
+                  {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+                </Button>
+                <Button onClick={onOpen}>
+                  <BsCommand />
+                </Button>
+              </Stack>
+            </Flex>
           </Flex>
-        </Flex>
-      </Box>
-    </nav>
+        </Box>
+      </nav>
+    </>
   );
 }

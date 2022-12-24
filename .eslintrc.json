@@ -13,7 +13,8 @@
     "linebreak-style": 1,
     "quotes": ["error", "double"],
     "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "jsx-a11y/no-autofocus": "off"
   },
   "parserOptions": {
     "ecmaVersion": 2021,

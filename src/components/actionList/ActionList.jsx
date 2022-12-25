@@ -1,13 +1,12 @@
+import { useEffect, useState } from "react";
 import { List, ListItem, Text, useMenu, useColorMode } from "@chakra-ui/react";
 import { createDescendantContext } from "@chakra-ui/descendant";
 import { useKeyPressEvent } from "react-use";
-import { CgArrowRight } from "react-icons/cg";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 import "./actionList.css";
 import actionListData from "./actionListData";
 import ActionCommand from "./ActionCommand";
-import { useEffect, useState } from "react";
+import ICONS from "../../constants/icons";
 
 export const [
   MenuDescendantsProvider,
@@ -23,6 +22,7 @@ export default function ActionList(props) {
   const [action, setAction] = useState(actionListData);
 
   const filterCommands = (query) => {
+    setFocusedIndex(0);
     if (query?.lenght !== 0) {
       const data = actionListData.map((ele) => ({
         ...ele,
@@ -52,7 +52,7 @@ export default function ActionList(props) {
             activeIndex={activeIndex}
             key={key}
             title={title}
-            icon={CgArrowRight}
+            icon={ICONS.RIGHT_ARROW}
             href={link}
           />
         );
@@ -72,7 +72,7 @@ export default function ActionList(props) {
       } else if (section === "theme") {
         const { title, key } = command;
 
-        const icon = colorMode === "dark" ? SunIcon : MoonIcon;
+        const icon = colorMode === "dark" ? ICONS.SUNNY : ICONS.MOON;
 
         return (
           <ActionCommand
@@ -120,7 +120,14 @@ export default function ActionList(props) {
             <ListItem>
               <Text className="list-heading-text">{data?.title}</Text>
             </ListItem>
-            {actionItemGrid(data?.children, data?.key, focusedIndex)}
+
+            {data?.children?.length > 0 ? (
+              actionItemGrid(data?.children, data?.key, focusedIndex)
+            ) : (
+              <Text fontSize="xs" as="i">
+                No selection available
+              </Text>
+            )}
           </span>
         ))}
       </MenuDescendantsProvider>

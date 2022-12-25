@@ -6,12 +6,12 @@ import {
   Flex,
   Text,
   Link,
-  IconButton,
+  // IconButton,
   Icon,
 } from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { FaPlayCircle } from "react-icons/fa";
+
 import profilePic from "../../assets/images/profile-pic.png";
+import ICONS from "../../constants/icons";
 
 export default function Introduction() {
   return (
@@ -28,18 +28,18 @@ export default function Introduction() {
           style={{ alignItems: "center" }}
         >
           Hi, I&apos;m Sanjampreet Singh.{" "}
-          <IconButton
+          {/* <IconButton
             aria-label="Play pronunciation track"
             variant="link"
             isRound
             icon={<Icon as={FaPlayCircle} boxSize="2rem" color="purple.500" />}
-          />
+          /> */}
         </Heading>
         <Text fontSize="md">
           I&apos;m full-stack engineer, a designer, and a content creator. I
           work at{" "}
           <Link href="https://www.bcg.com/x" isExternal>
-            BCG X<ExternalLinkIcon mx="2px" />
+            BCG X<Icon as={ICONS.EXTERNAL_LINK} mx="2px" />
           </Link>{" "}
           as a Software Engineer.
           <br />

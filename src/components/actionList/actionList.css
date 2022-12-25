@@ -1,0 +1,22 @@
+.list-style {
+  list-style-type: none;
+  overflow: auto;
+  width: var(--chakra-sizes-full);
+  padding-bottom: var(--chakra-space-2);
+  padding-inline-start: var(--chakra-space-2);
+  padding-inline-end: var(--chakra-space-2);
+}
+
+.list-style > :not(style) ~ :not(style) {
+  margin-top: 0.5rem;
+  margin-inline: 0px;
+  margin-bottom: 0px;
+}
+
+.list-heading-text {
+  color: var(--chakra-colors-gray-500);
+  margin-top: var(--chakra-space-2);
+  margin-bottom: var(--chakra-space-2);
+  font-size: var(--chakra-fontSizes-xs);
+  text-transform: capitalize;
+}

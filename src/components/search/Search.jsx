@@ -1,6 +1,14 @@
-import { Modal, ModalOverlay, ModalContent, Input } from "@chakra-ui/react";
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  Input,
+  VStack,
+  StackDivider,
+} from "@chakra-ui/react";
 
 import "./search.css";
+import ActionList from "../actionList/ActionList";
 
 export default function Search(props) {
   const { isOpen, onClose } = props;
@@ -19,15 +27,23 @@ export default function Search(props) {
     >
       <ModalOverlay
         bg="blackAlpha.300"
-        backdropFilter="blur(10px)"
+        backdropFilter="blur(2px)"
         style={{ zIndex: 1400 }}
       />
       <ModalContent style={{ zIndex: 1700 }} className="search-content">
-        <Input
-          placeholder="Search commands (ex. Change theme)"
-          className="search-bar"
-          variant="outline"
-        />
+        <VStack
+          divider={<StackDivider borderColor="gray.200" />}
+          spacing={2}
+          align="stretch"
+        >
+          <Input
+            placeholder="Search commands (ex. Change theme)"
+            className="search-bar"
+            variant="outline"
+            focusBorderColor="transparent"
+          />
+          <ActionList />
+        </VStack>
       </ModalContent>
     </Modal>
   );

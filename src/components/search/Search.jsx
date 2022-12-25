@@ -15,6 +15,7 @@ import { useCallback, useState } from "react";
 export default function Search(props) {
   const { isOpen, onClose, onOpen } = props;
   const [focusedIndex, setFocusedIndex] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const hideSearch = useCallback(() => {
     onClose();
@@ -46,7 +47,7 @@ export default function Search(props) {
     >
       <ModalOverlay
         bg="blackAlpha.300"
-        backdropFilter="blur(2px)"
+        backdropFilter="blur(5px)"
         style={{ zIndex: 1400 }}
       />
       <ModalContent style={{ zIndex: 1700 }} className="search-content">
@@ -66,11 +67,13 @@ export default function Search(props) {
             borderBottomStyle="solid"
             autoFocus
             rounded="none"
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
           <ActionList
             focusedIndex={focusedIndex}
             setFocusedIndex={setFocusedIndex}
             onClose={onClose}
+            searchQuery={searchQuery}
           />
         </VStack>
       </ModalContent>

@@ -7,6 +7,7 @@ import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import "./actionList.css";
 import actionListData from "./actionListData";
 import ActionCommand from "./ActionCommand";
+import { useEffect, useState } from "react";
 
 export const [
   MenuDescendantsProvider,
@@ -16,12 +17,32 @@ export const [
 ] = createDescendantContext();
 
 export default function ActionList(props) {
-  const { focusedIndex, setFocusedIndex, onClose } = props;
+  const { focusedIndex, setFocusedIndex, onClose, searchQuery } = props;
   const { descendants } = useMenu();
   const { colorMode, toggleColorMode } = useColorMode();
+  const [action, setAction] = useState(actionListData);
+
+  const filterCommands = (query) => {
+    if (query?.lenght !== 0) {
+      const data = actionListData.map((ele) => ({
+        ...ele,
+        children: ele.children?.filter((e) =>
+          e.key.includes(query.toLowerCase())
+        ),
+      }));
+      setAction(data);
+    } else {
+      console.log(query);
+      setAction(actionListData);
+    }
+  };
+
+  useEffect(() => {
+    filterCommands(searchQuery);
+  }, [searchQuery]);
 
   const actionItemGrid = (data, section, activeIndex) =>
-    data.map((command) => {
+    data?.map((command) => {
       if (section === "pages") {
         const { key, title, link } = command;
 
@@ -94,12 +115,12 @@ export default function ActionList(props) {
       px={2}
     >
       <MenuDescendantsProvider value={descendants}>
-        {actionListData.map((data) => (
-          <span key={data.key}>
+        {action?.map((data) => (
+          <span key={data?.key}>
             <ListItem>
-              <Text className="list-heading-text">{data.title}</Text>
+              <Text className="list-heading-text">{data?.title}</Text>
             </ListItem>
-            {actionItemGrid(data.children, data.key, focusedIndex)}
+            {actionItemGrid(data?.children, data?.key, focusedIndex)}
           </span>
         ))}
       </MenuDescendantsProvider>

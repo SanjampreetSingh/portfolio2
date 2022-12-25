@@ -6,12 +6,31 @@ import {
   VStack,
   StackDivider,
 } from "@chakra-ui/react";
+import { useKeyPressEvent } from "react-use";
 
 import "./search.css";
 import ActionList from "../actionList/ActionList";
+import { useCallback, useState } from "react";
 
 export default function Search(props) {
-  const { isOpen, onClose } = props;
+  const { isOpen, onClose, onOpen } = props;
+  const [focusedIndex, setFocusedIndex] = useState(0);
+
+  const hideSearch = useCallback(() => {
+    onClose();
+    setFocusedIndex(0);
+  }, [onClose, setFocusedIndex]);
+
+  useKeyPressEvent((e) => {
+    if (!isOpen && e.key === "k" && (e.metaKey || e.ctrlKey)) {
+      e.stopPropagation();
+      e.preventDefault();
+      onOpen();
+    }
+    return true;
+  });
+
+  useKeyPressEvent("Escape", hideSearch);
 
   return (
     <Modal
@@ -41,8 +60,18 @@ export default function Search(props) {
             className="search-bar"
             variant="outline"
             focusBorderColor="transparent"
+            px={3}
+            py={4}
+            borderBottomWidth="1px"
+            borderBottomStyle="solid"
+            autoFocus
+            rounded="none"
           />
-          <ActionList />
+          <ActionList
+            focusedIndex={focusedIndex}
+            setFocusedIndex={setFocusedIndex}
+            onClose={onClose}
+          />
         </VStack>
       </ModalContent>
     </Modal>

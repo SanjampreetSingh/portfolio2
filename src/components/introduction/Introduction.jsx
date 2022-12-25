@@ -45,7 +45,7 @@ export default function Introduction() {
           <br />
           I am passionate for creating things. I love to build and develop
           software that help society. <br />
-          In my pass-time, I socialize with my friends, and going for long
+          In my pass-time, I socialize with my friends, and go for long
           walks. I meditate and also sing Gurbani Shabads.
         </Text>
       </VStack>

@@ -20,3 +20,26 @@
   font-size: var(--chakra-fontSizes-xs);
   text-transform: capitalize;
 }
+
+.list-actionable-item {
+  padding-inline-start: var(--chakra-space-3);
+  padding-inline-end: var(--chakra-space-3);
+  /* padding-top: var(--chakra-space-3); */
+  padding-bottom: var(--chakra-space-3);
+  background: var(--chakra-colors-transparent);
+  cursor: pointer;
+  border-radius: var(--chakra-radii-md);
+}
+
+.list-actionable-item:hover {
+  background: var(--chakra-colors-blackAlpha-50);
+}
+
+.actionable-item-container {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  flex-direction: row;
+}

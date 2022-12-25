@@ -33,7 +33,7 @@ export default function Search(props) {
       <ModalContent style={{ zIndex: 1700 }} className="search-content">
         <VStack
           divider={<StackDivider borderColor="gray.200" />}
-          spacing={2}
+          spacing={1}
           align="stretch"
         >
           <Input

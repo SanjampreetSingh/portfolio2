@@ -4,7 +4,7 @@ import { createDescendantContext } from "@chakra-ui/descendant";
 import { useKeyPressEvent } from "react-use";
 
 import "./actionList.css";
-import actionListData from "./actionListData";
+import actionListData from "../../constants/actionListData";
 import ActionCommand from "./ActionCommand";
 import ICONS from "../../constants/icons";
 

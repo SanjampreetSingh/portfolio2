@@ -1,4 +1,5 @@
-import ICONS from "../../constants/icons";
+import ICONS from "./icons";
+import { instagramLink, linkedinLink, twitterLink, youtubeLink } from "./links";
 
 const actionListData = [
   {
@@ -21,25 +22,25 @@ const actionListData = [
         title: "LinkedIn",
         key: "linkedin",
         icon: ICONS.LINKEDIN,
-        link: "https://www.linkedin.com/in/sanjampreetsingh/",
+        link: linkedinLink,
       },
       {
         title: "Twitter",
         key: "twitter",
         icon: ICONS.TWITTER,
-        link: "https://twitter.com/sanjampreet_",
+        link: twitterLink,
       },
       {
         title: "YouTube",
         key: "youtube",
         icon: ICONS.YOUTUBE,
-        link: "https://www.youtube.com/@CodeSanjam",
+        link: youtubeLink,
       },
       {
         title: "Instagram",
         key: "instagram",
         icon: ICONS.INSTAGRAM,
-        link: "https://www.instagram.com/code_sanjam/",
+        link: instagramLink,
       },
     ],
   },

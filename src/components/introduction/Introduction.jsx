@@ -20,7 +20,7 @@ export default function Introduction() {
       spacing="24px"
       style={{ alignItems: "center" }}
     >
-      <VStack align="stretch" style={{ width: "50vw" }}>
+      <VStack align="stretch" >
         <Heading
           as="h1"
           size="lg"

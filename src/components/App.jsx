@@ -5,6 +5,7 @@ import Introduction from "./introduction/Introduction";
 import Experience from "./experience/Experience";
 import LeftSocial from "./leftSocial/LeftSocial";
 import SectionLayout from "./layout/SectionLayout";
+import Education from "./education/Education";
 
 export default function App() {
   return (
@@ -20,9 +21,23 @@ export default function App() {
         centerContent
       >
         <VStack alignItems="stretch" flex={1} w="full" spacing={16}>
-          <VStack as="main" flex={1} w="full" spacing="20">
+          <VStack as="main" flex={1} w="full" spacing="24">
             <Introduction />
-            <SectionLayout heading="Experience" subheading="The companies I've worked with." section={<Experience />} />;
+            <SectionLayout
+              heading="Experience"
+              subheading="The companies I've worked with."
+              section={<Experience />}
+            />
+            <SectionLayout
+              heading="Skills"
+              subheading="What I've to offer."
+              // section={}
+            />
+            <SectionLayout
+              heading="Education"
+              subheading="The things I've learnt."
+              section={<Education />}
+            />
           </VStack>
         </VStack>
       </Container>

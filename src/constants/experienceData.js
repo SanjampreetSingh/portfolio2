@@ -8,7 +8,7 @@ const experienceData = [
     link: bcgXLink,
     occupation: "Software Engineer",
     description: "At BCG X as a Software Engineer, I work at company's Gurugram offices in India.",
-    data: ["I work as a full stack developer for in BCG's technology division."],
+    data: ["I work as a full stack developer in BCG's technology division."],
   },
   {
     key: 2,

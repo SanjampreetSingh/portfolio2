@@ -6,3 +6,4 @@ export const githubLink = "https://github.com/SanjampreetSingh/";
 export const bcgXLink = "https://www.bcg.com/x";
 export const accentureLink = "https://www.accenture.com/in-en";
 export const infosysLink = "https://www.infosys.com/";
+export const gndecLink = "https://www.gndec.ac.in/";

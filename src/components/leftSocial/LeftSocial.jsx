@@ -19,7 +19,7 @@ export default function LeftSocial() {
           {socialLinkData?.map((d) => (
             <li key={d.key}>
               <Link className="left-social-link" href={d.link}>
-                <Icon h="18px" w="18px" as={d.icon} />
+                <Icon h="25px" w="25px" as={d.icon} />
               </Link>
             </li>
           ))}

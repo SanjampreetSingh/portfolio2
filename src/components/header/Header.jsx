@@ -20,7 +20,7 @@ export default function Header() {
 
   useEffect(() => {
     setShortcut(
-      navigator.userAgent.indexOf("Mac OS X") != -1 ? "Cmd + K" : "Ctrl + K"
+      navigator.userAgent.indexOf("Mac OS X") !== -1 ? "Cmd + K" : "Ctrl + K"
     );
   }, [setShortcut]);
 

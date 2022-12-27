@@ -20,9 +20,9 @@ export default function App() {
         centerContent
       >
         <VStack alignItems="stretch" flex={1} w="full" spacing={16}>
-          <VStack as="main" flex={1} w="full" spacing={16}>
+          <VStack as="main" flex={1} w="full" spacing="20">
             <Introduction />
-            <SectionLayout heading="Experience" section={<Experience />} />;
+            <SectionLayout heading="Experience" subheading="The companies I've worked with." section={<Experience />} />;
           </VStack>
         </VStack>
       </Container>

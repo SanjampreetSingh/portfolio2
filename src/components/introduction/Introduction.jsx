@@ -24,7 +24,7 @@ export default function Introduction() {
       <VStack align="stretch">
         <Heading
           as="h1"
-          size="lg"
+          size="xl"
           noOfLines={3}
           style={{ alignItems: "center" }}
         >

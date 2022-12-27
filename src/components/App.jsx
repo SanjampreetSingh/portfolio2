@@ -4,6 +4,7 @@ import Header from "./header/Header";
 import Introduction from "./introduction/Introduction";
 import Experience from "./experience/Experience";
 import LeftSocial from "./leftSocial/LeftSocial";
+import SectionLayout from "./layout/SectionLayout";
 
 export default function App() {
   return (
@@ -21,7 +22,7 @@ export default function App() {
         <VStack alignItems="stretch" flex={1} w="full" spacing={16}>
           <VStack as="main" flex={1} w="full" spacing={16}>
             <Introduction />
-            <Experience />
+            <SectionLayout heading="Experience" section={<Experience />} />;
           </VStack>
         </VStack>
       </Container>

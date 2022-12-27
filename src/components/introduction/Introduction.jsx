@@ -12,6 +12,7 @@ import {
 
 import profilePic from "../../assets/images/profile-pic.png";
 import ICONS from "../../constants/icons";
+import { bcgXLink } from "../../constants/links";
 
 export default function Introduction() {
   return (
@@ -20,7 +21,7 @@ export default function Introduction() {
       spacing="24px"
       style={{ alignItems: "center" }}
     >
-      <VStack align="stretch" >
+      <VStack align="stretch">
         <Heading
           as="h1"
           size="lg"
@@ -38,15 +39,15 @@ export default function Introduction() {
         <Text fontSize="md">
           I&apos;m full-stack engineer, a designer, and a content creator. I
           work at{" "}
-          <Link href="https://www.bcg.com/x" isExternal>
+          <Link href={bcgXLink} isExternal>
             BCG X<Icon as={ICONS.EXTERNAL_LINK} mx="2px" />
           </Link>{" "}
           as a Software Engineer.
           <br />
           I am passionate for creating things. I love to build and develop
           software that help society. <br />
-          In my pass-time, I socialize with my friends, and go for long
-          walks. I meditate and also sing Gurbani Shabads.
+          In my pass-time, I socialize with my friends, and go for long walks. I
+          meditate and also sing Gurbani Shabads.
         </Text>
       </VStack>
       <Flex>

@@ -5,6 +5,7 @@ import {
   IoLogoInstagram,
   IoSunnyOutline,
   IoMoon,
+  IoLogoGithub
 } from "react-icons/io5";
 import { CgArrowRight } from "react-icons/cg";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
@@ -14,6 +15,7 @@ const ICONS = {
   LINKEDIN: IoLogoLinkedin,
   YOUTUBE: IoLogoYoutube,
   INSTAGRAM: IoLogoInstagram,
+  GITHUB: IoLogoGithub,
   SUNNY: IoSunnyOutline,
   MOON: IoMoon,
   RIGHT_ARROW: CgArrowRight,

@@ -1,5 +1,4 @@
-import ICONS from "./icons";
-import { instagramLink, linkedinLink, twitterLink, youtubeLink } from "./links";
+import socialLinkData from "./socialLinkData";
 
 const actionListData = [
   {
@@ -17,32 +16,7 @@ const actionListData = [
   {
     title: "Social",
     key: "social",
-    children: [
-      {
-        title: "LinkedIn",
-        key: "linkedin",
-        icon: ICONS.LINKEDIN,
-        link: linkedinLink,
-      },
-      {
-        title: "Twitter",
-        key: "twitter",
-        icon: ICONS.TWITTER,
-        link: twitterLink,
-      },
-      {
-        title: "YouTube",
-        key: "youtube",
-        icon: ICONS.YOUTUBE,
-        link: youtubeLink,
-      },
-      {
-        title: "Instagram",
-        key: "instagram",
-        icon: ICONS.INSTAGRAM,
-        link: instagramLink,
-      },
-    ],
+    children: socialLinkData,
   },
   {
     title: "Theme",

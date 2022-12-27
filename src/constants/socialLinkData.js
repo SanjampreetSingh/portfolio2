@@ -1,12 +1,24 @@
 import ICONS from "./icons";
-import { instagramLink, linkedinLink, twitterLink, youtubeLink } from "./links";
+import {
+  githubLink,
+  instagramLink,
+  linkedinLink,
+  twitterLink,
+  youtubeLink,
+} from "./links";
 
-const leftSocialLinkData = [
+const socialLinkData = [
   {
     title: "LinkedIn",
     key: "linkedin",
     icon: ICONS.LINKEDIN,
     link: linkedinLink,
+  },
+  {
+    title: "GitHub",
+    key: "github",
+    icon: ICONS.GITHUB,
+    link: githubLink,
   },
   {
     title: "Twitter",
@@ -28,4 +40,4 @@ const leftSocialLinkData = [
   },
 ];
 
-export default leftSocialLinkData;
+export default socialLinkData;

@@ -9,14 +9,14 @@ import {
 } from "@chakra-ui/react";
 
 import "./leftSocial.css";
-import leftSocialLinkData from "../../constants/leftSocialLinkData";
+import socialLinkData from "../../constants/socialLinkData";
 
 export default function LeftSocial() {
   return (
     <Show breakpoint="(min-width: 1200px)">
       <Box zIndex={10} className="left-social-container">
         <VStack as={"ul"} className="left-social-stack">
-          {leftSocialLinkData?.map((d) => (
+          {socialLinkData?.map((d) => (
             <li key={d.key}>
               <Link className="left-social-link" href={d.link}>
                 <Icon h="18px" w="18px" as={d.icon} />

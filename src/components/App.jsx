@@ -6,6 +6,7 @@ import Experience from "./experience/Experience";
 import LeftSocial from "./leftSocial/LeftSocial";
 import SectionLayout from "./layout/SectionLayout";
 import Education from "./education/Education";
+import Footer from "./footer/Footer";
 
 export default function App() {
   return (
@@ -30,7 +31,7 @@ export default function App() {
             />
             <SectionLayout
               heading="Skills"
-              subheading="What I've to offer."
+              subheading="The things I've worked with."
               // section={}
             />
             <SectionLayout
@@ -40,6 +41,9 @@ export default function App() {
             />
           </VStack>
         </VStack>
+      </Container>
+      <Container maxW="5xl">
+        <Footer />
       </Container>
     </>
   );

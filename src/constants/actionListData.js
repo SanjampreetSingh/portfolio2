@@ -1,17 +1,11 @@
+import pagesData from "./pagesData";
 import socialLinkData from "./socialLinkData";
 
 const actionListData = [
   {
     title: "Pages",
     key: "pages",
-    children: [
-      {
-        title: "Home",
-        key: "home",
-        icon: "home",
-        link: "/",
-      },
-    ],
+    children: pagesData,
   },
   {
     title: "Social",

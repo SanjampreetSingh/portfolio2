@@ -10,7 +10,8 @@
           "position: sticky"
         ]
       }
-    ]
+    ],
+    "manifest-is-valid": "off"
   },
   "browserslist": [
     "defaults",

@@ -37,5 +37,6 @@
   "display": "standalone",
   "scope": "/",
   "background_color": "#aeccec",
-  "theme_color": "#aeccec"
+  "theme_color": "#aeccec",
+  "orientation": "vertical"
 }

@@ -6,6 +6,7 @@ import {
   Divider,
   Center,
   Show,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 import "./leftSocial.css";
@@ -24,7 +25,11 @@ export default function LeftSocial() {
             </li>
           ))}
           <Center height="40vh">
-            <Divider orientation="vertical" className="left-social-hr" />
+            <Divider
+              orientation="vertical"
+              className="left-social-hr"
+              borderColor={useColorModeValue("gray.700", "white !important")}
+            />
           </Center>
         </VStack>
       </Box>

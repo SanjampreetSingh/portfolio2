@@ -14,12 +14,13 @@ import { BsCommand } from "react-icons/bs";
 import Search from "../search/Search";
 import "./header.css";
 import logoWt from "../../assets/images/logo-wt.png";
+import logoDk from "../../assets/images/logo-dk.png";
 
 export default function Header() {
   const { colorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [shortcut, setShortcut] = useState();
-  const logo = colorMode === "light" ? logoWt : "Logo";
+  const logo = colorMode === "light" ? logoWt : logoDk;
 
   useEffect(() => {
     setShortcut(

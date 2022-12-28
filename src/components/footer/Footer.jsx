@@ -13,10 +13,11 @@ import socialLinkData from "../../constants/socialLinkData";
 import pagesData from "../../constants/pagesData";
 import RoundSocialButton from "../common/button/RoundSocialButton";
 import logoWt from "../../assets/images/logo-wt.png";
+import logoDk from "../../assets/images/logo-dk.png";
 
 export default function Footer() {
   const { colorMode } = useColorMode();
-  const logo = colorMode === "light" ? logoWt : "Logo";
+  const logo = colorMode === "light" ? logoWt : logoDk;
 
   return (
     <Box
@@ -32,7 +33,13 @@ export default function Footer() {
         justify={"center"}
         align={"center"}
       >
-        <Image src={logo} boxSize="10" w="100" objectFit="fill" loading="lazy" />
+        <Image
+          src={logo}
+          boxSize="10"
+          w="100"
+          objectFit="fill"
+          loading="lazy"
+        />
         <Stack direction={"row"} spacing={6}>
           {pagesData.map((i) => (
             <Link href={i.link} key={i.key}>

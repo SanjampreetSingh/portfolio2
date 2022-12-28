@@ -6,7 +6,7 @@ const experienceData = [
     title: "Boston Consulting Group - X",
     timeline: "April 2022 - Present",
     link: bcgXLink,
-    occupation: "Software Engineer",
+    subtitle: "Software Engineer",
     description: "At BCG X as a Software Engineer, I work at company's Gurugram offices in India.",
     data: ["I work as a full stack developer in BCG's technology division."],
   },
@@ -15,7 +15,7 @@ const experienceData = [
     title: "Accenture",
     timeline: "November 2019 - March 2022",
     link: accentureLink,
-    occupation: "Software Engineer Analyst",
+    subtitle: "Software Engineer Analyst",
     description:
       "At Accenture as a Software Engineer, I worked at company's Bangaluru offices in India.",
     data: [
@@ -29,7 +29,7 @@ const experienceData = [
     title: "Infosys",
     timeline: "January 2019 - April 2019",
     link: infosysLink,
-    occupation: "Intern",
+    subtitle: "Intern",
     description:
       "At Infosys as an Intern, I worked within the company's best training facilities in Mysuru, India.",
     data: [

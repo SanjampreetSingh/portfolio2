@@ -6,7 +6,7 @@ const educationData = [
     title: "Guru Nanak Dev Engineering College",
     timeline: "July 2015 - May 2019",
     link: gndecLink,
-    course: "B.Tech in Information Technology",
+    subtitle: "B.Tech in Information Technology",
     description:
       "I studied Bachelor of Technology majoring in Information Technology at the GNDEC, Ludhiana.",
     data: [

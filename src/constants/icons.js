@@ -14,6 +14,9 @@ import {
 import { CgArrowRight } from "react-icons/cg";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { AiOutlineConsoleSql } from "react-icons/ai";
+import { DiDjango, DiReact, DiBootstrap } from "react-icons/di";
+import { SiChakraui, SiMaterialui } from "react-icons/si";
+import { Latex } from "../assets/icons/Latex";
 
 const ICONS = {
   TWITTER: IoLogoTwitter,
@@ -30,6 +33,12 @@ const ICONS = {
   JAVASCRIPT: IoLogoJavascript,
   CSS: IoLogoCss3,
   SQL: AiOutlineConsoleSql,
+  DJANGO: DiDjango,
+  REACT: DiReact,
+  BOOTSTRAP: DiBootstrap,
+  MATERIAL_UI: SiMaterialui,
+  CHAKRA: SiChakraui,
+  LATEX: Latex,
 };
 
 export default ICONS;

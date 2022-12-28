@@ -33,7 +33,7 @@ const skillsListData = [
       {
         title: "Latex",
         key: "latex",
-        icon: "",
+        icon: ICONS.LATEX,
       },
     ],
   },
@@ -44,32 +44,27 @@ const skillsListData = [
       {
         title: "Django",
         key: "django",
-        icon: ICONS.PYTHON,
+        icon: ICONS.DJANGO,
       },
       {
         title: "ReactJS",
         key: "react-js",
-        icon: ICONS.JAVASCRIPT,
+        icon: ICONS.REACT,
       },
       {
         title: "Bootstrap",
         key: "bootstrap",
-        icon: ICONS.HTML,
-      },
-      {
-        title: "Bulma",
-        key: "bulma",
-        icon: ICONS.CSS,
+        icon: ICONS.BOOTSTRAP,
       },
       {
         title: "Material UI",
         key: "material-ui",
-        icon: ICONS.SQL,
+        icon: ICONS.MATERIAL_UI,
       },
       {
         title: "Chakra UI",
         key: "chakra-ui",
-        icon: "",
+        icon: ICONS.CHAKRA,
       },
     ],
   },

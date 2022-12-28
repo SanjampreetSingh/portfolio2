@@ -41,7 +41,7 @@ export default function Header() {
             <Image src={logo} boxSize="8" w="100" objectFit="fill" loading="lazy" />
             <Flex alignItems={"center"}>
               <Stack direction={"row"} spacing={7}>
-                <Tooltip label={`Command Palette (${shortcut})`}>
+                <Tooltip label={`Command Palette (${shortcut})`} hasArrow>
                   <IconButton
                     aria-label="toggle theme"
                     icon={<BsCommand />}

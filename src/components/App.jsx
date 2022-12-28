@@ -6,6 +6,7 @@ import LeftSocial from "./leftSocial/LeftSocial";
 import Footer from "./footer/Footer";
 import SectionLayout from "./common/layout/SectionLayout";
 import { sectionsData } from "../constants/sectionsData";
+import RightSocial from "./rightEmail/RightSocial";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Header />
       </Container>
       <LeftSocial />
+      <RightSocial />
       <Container
         display="flex"
         maxW="5xl"

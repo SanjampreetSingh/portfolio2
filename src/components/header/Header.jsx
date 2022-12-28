@@ -7,16 +7,19 @@ import {
   Tooltip,
   useColorMode,
   useDisclosure,
+  Image,
 } from "@chakra-ui/react";
 import { BsCommand } from "react-icons/bs";
 
 import Search from "../search/Search";
 import "./header.css";
+import logoWt from "../../assets/images/logo-wt.png";
 
 export default function Header() {
   const { colorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [shortcut, setShortcut] = useState();
+  const logo = colorMode === "light" ? logoWt : "Logo";
 
   useEffect(() => {
     setShortcut(
@@ -34,7 +37,7 @@ export default function Header() {
         >
           <Search isOpen={isOpen} onClose={onClose} onOpen={onOpen} />
           <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-            <Box>Logo</Box>
+            <Image src={logo} boxSize="8" w="100" objectFit="fill" loading="lazy" />
             <Flex alignItems={"center"}>
               <Stack direction={"row"} spacing={7}>
                 <Tooltip label={`Command Palette (${shortcut})`}>

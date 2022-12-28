@@ -5,13 +5,19 @@ import {
   Stack,
   Text,
   useColorModeValue,
+  Image,
+  useColorMode,
 } from "@chakra-ui/react";
 
 import socialLinkData from "../../constants/socialLinkData";
 import pagesData from "../../constants/pagesData";
 import RoundSocialButton from "../common/button/RoundSocialButton";
+import logoWt from "../../assets/images/logo-wt.png";
 
 export default function Footer() {
+  const { colorMode } = useColorMode();
+  const logo = colorMode === "light" ? logoWt : "Logo";
+
   return (
     <Box
       bg={useColorModeValue("white", "#1A202C")}
@@ -26,7 +32,7 @@ export default function Footer() {
         justify={"center"}
         align={"center"}
       >
-        {/* <Logo /> */}
+        <Image src={logo} boxSize="10" w="100" objectFit="fill" loading="lazy" />
         <Stack direction={"row"} spacing={6}>
           {pagesData.map((i) => (
             <Link href={i.link} key={i.key}>

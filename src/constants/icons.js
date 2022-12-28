@@ -14,8 +14,14 @@ import {
 import { CgArrowRight } from "react-icons/cg";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { AiOutlineConsoleSql } from "react-icons/ai";
-import { DiDjango, DiReact, DiBootstrap } from "react-icons/di";
-import { SiChakraui, SiMaterialui } from "react-icons/si";
+import {
+  DiDjango,
+  DiReact,
+  DiBootstrap,
+  DiDocker,
+  DiGit,
+} from "react-icons/di";
+import { SiChakraui, SiMaterialui, SiVisualstudiocode } from "react-icons/si";
 import { Latex } from "../assets/icons/Latex";
 
 const ICONS = {
@@ -39,6 +45,9 @@ const ICONS = {
   MATERIAL_UI: SiMaterialui,
   CHAKRA: SiChakraui,
   LATEX: Latex,
+  VSCODE: SiVisualstudiocode,
+  DOCKER: DiDocker,
+  GIT: DiGit,
 };
 
 export default ICONS;

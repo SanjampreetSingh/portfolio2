@@ -68,6 +68,27 @@ const skillsListData = [
       },
     ],
   },
+  {
+    title: "Tools and Software",
+    key: "tools-software",
+    children: [
+      {
+        title: "VS Code",
+        key: "vs-code",
+        icon: ICONS.VSCODE,
+      },
+      {
+        title: "Git",
+        key: "git",
+        icon: ICONS.GIT,
+      },
+      {
+        title: "Docker",
+        key: "docker",
+        icon: ICONS.DOCKER,
+      },
+    ],
+  },
 ];
 
 export default skillsListData;

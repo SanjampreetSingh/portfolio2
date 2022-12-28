@@ -12,8 +12,8 @@ import {
 import socialLinkData from "../../constants/socialLinkData";
 import pagesData from "../../constants/pagesData";
 import RoundSocialButton from "../common/button/RoundSocialButton";
-import logoWt from "../../assets/images/logo-wt.png";
-import logoDk from "../../assets/images/logo-dk.png";
+import logoWt from "../../assets/images/logo-wt.webp";
+import logoDk from "../../assets/images/logo-dk.webp";
 
 export default function Footer() {
   const { colorMode } = useColorMode();
@@ -39,6 +39,7 @@ export default function Footer() {
           w="100"
           objectFit="fill"
           loading="lazy"
+          alt="Sanjam Dev logo"
         />
         <Stack direction={"row"} spacing={6}>
           {pagesData.map((i) => (

@@ -13,8 +13,8 @@ import { BsCommand } from "react-icons/bs";
 
 import Search from "../search/Search";
 import "./header.css";
-import logoWt from "../../assets/images/logo-wt.png";
-import logoDk from "../../assets/images/logo-dk.png";
+import logoWt from "../../assets/images/logo-wt.webp";
+import logoDk from "../../assets/images/logo-dk.webp";
 
 export default function Header() {
   const { colorMode } = useColorMode();
@@ -38,7 +38,14 @@ export default function Header() {
         >
           <Search isOpen={isOpen} onClose={onClose} onOpen={onOpen} />
           <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-            <Image src={logo} boxSize="8" w="100" objectFit="fill" loading="lazy" />
+            <Image
+              src={logo}
+              boxSize="8"
+              w="100"
+              objectFit="fill"
+              loading="lazy"
+              alt="Sanjam Dev logo"
+            />
             <Flex alignItems={"center"}>
               <Stack direction={"row"} spacing={7}>
                 <Tooltip label={`Command Palette (${shortcut})`} hasArrow>

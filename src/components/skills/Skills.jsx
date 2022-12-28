@@ -28,7 +28,6 @@ export default function Skills() {
         {s.children.map((i) => (
           <RoundSocialButton
             label={i.title}
-            href={i.link}
             key={i.key}
             icon={i.icon}
           />

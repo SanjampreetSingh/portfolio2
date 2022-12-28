@@ -58,6 +58,7 @@ export default function Footer() {
                 href={i.link}
                 key={i.key}
                 icon={i.icon}
+                disableToolTip
               />
             ))}
           </Stack>

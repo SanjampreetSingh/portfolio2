@@ -22,6 +22,7 @@ import {
   DiGit,
 } from "react-icons/di";
 import { SiChakraui, SiMaterialui, SiVisualstudiocode } from "react-icons/si";
+import { TiDocumentText } from "react-icons/ti";
 import { Latex } from "../assets/icons/Latex";
 
 const ICONS = {
@@ -48,6 +49,7 @@ const ICONS = {
   VSCODE: SiVisualstudiocode,
   DOCKER: DiDocker,
   GIT: DiGit,
+  RESUME: TiDocumentText,
 };
 
 export default ICONS;

@@ -37,7 +37,7 @@ export default function Introduction() {
           /> */}
         </Heading>
         <Text fontSize="md">
-          I&apos;m full-stack engineer, a designer, and a content creator. I
+          I&apos;m full-stack developer, a designer, and a content creator. I
           work at{" "}
           <Link href={bcgXLink} isExternal>
             BCG X<Icon as={ICONS.EXTERNAL_LINK} mx="2px" />

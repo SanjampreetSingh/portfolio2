@@ -1,3 +1,5 @@
+import ICONS from "./icons";
+import { resumeLink } from "./links";
 import pagesData from "./pagesData";
 import socialLinkData from "./socialLinkData";
 
@@ -19,6 +21,18 @@ const actionListData = [
       {
         title: "Change theme",
         key: "change-theme",
+      },
+    ],
+  },
+  {
+    title: "Resume",
+    key: "resume",
+    children: [
+      {
+        title: "Check Resume",
+        key: "check-resume",
+        icon: ICONS.RESUME,
+        link: resumeLink,
       },
     ],
   },

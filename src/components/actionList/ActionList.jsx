@@ -84,6 +84,19 @@ export default function ActionList(props) {
             onClick={toggleColorMode}
           />
         );
+      } else if (section === "resume") {
+        const { key, title, link, icon } = command;
+
+        return (
+          <ActionCommand
+            onClose={onClose}
+            activeIndex={activeIndex}
+            key={key}
+            title={title}
+            icon={icon}
+            href={link}
+          />
+        );
       }
     });
 

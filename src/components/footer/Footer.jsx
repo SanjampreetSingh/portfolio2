@@ -1,47 +1,21 @@
 import {
   Box,
-  chakra,
   Container,
   Link,
   Stack,
   Text,
-  Icon,
   useColorModeValue,
-  VisuallyHidden,
 } from "@chakra-ui/react";
 
 import socialLinkData from "../../constants/socialLinkData";
 import pagesData from "../../constants/pagesData";
-
-const SocialButton = ({ children, label, href }) => {
-  return (
-    <chakra.button
-      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-      rounded={"full"}
-      w={8}
-      h={8}
-      cursor={"pointer"}
-      as={"a"}
-      href={href}
-      display={"inline-flex"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      transition={"background 0.3s ease"}
-      _hover={{
-        bg: "#aeccec",
-      }}
-    >
-      <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
-    </chakra.button>
-  );
-};
+import RoundSocialButton from "../common/button/RoundSocialButton";
 
 export default function Footer() {
   return (
     <Box
-      bg={useColorModeValue("white", "gray.900")}
-      color={useColorModeValue("black", "gray.200")}
+      bg={useColorModeValue("white", "#1A202C")}
+      color={useColorModeValue("black", "white")}
       mt="4rem !important"
     >
       <Container
@@ -65,7 +39,7 @@ export default function Footer() {
       <Box
         borderTopWidth={1}
         borderStyle={"solid"}
-        borderColor={useColorModeValue("gray.200", "gray.700")}
+        borderColor={useColorModeValue("gray.200", "white")}
       >
         <Container
           as={Stack}
@@ -79,9 +53,12 @@ export default function Footer() {
           <Text>© {new Date().getFullYear()} Sanjampreet Singh</Text>
           <Stack direction={"row"} spacing={6}>
             {socialLinkData.map((i) => (
-              <SocialButton label={i.title} href={i.link} key={i.key}>
-                <Icon as={i.icon} />
-              </SocialButton>
+              <RoundSocialButton
+                label={i.title}
+                href={i.link}
+                key={i.key}
+                icon={i.icon}
+              />
             ))}
           </Stack>
         </Container>

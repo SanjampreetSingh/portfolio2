@@ -7,6 +7,7 @@ import LeftSocial from "./leftSocial/LeftSocial";
 import SectionLayout from "./layout/SectionLayout";
 import Education from "./education/Education";
 import Footer from "./footer/Footer";
+import Skills from "./skills/Skills";
 
 export default function App() {
   return (
@@ -32,7 +33,7 @@ export default function App() {
             <SectionLayout
               heading="Skills"
               subheading="The things I've worked with."
-              // section={}
+              section={<Skills />}
             />
             <SectionLayout
               heading="Education"

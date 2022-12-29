@@ -19,7 +19,7 @@ export default function LeftSocial() {
         <VStack as={"ul"} className="left-social-stack">
           {socialLinkData?.map((d) => (
             <li key={d.key}>
-              <Link className="left-social-link" href={d.link}>
+              <Link className="left-social-link" href={d.link} isExternal>
                 <Icon h="25px" w="25px" as={d.icon} />
               </Link>
             </li>

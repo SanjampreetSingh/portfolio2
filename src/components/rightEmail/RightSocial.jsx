@@ -21,6 +21,7 @@ export default function RightSocial() {
             rel="nofollow noopener noreferrer"
             style={{ writingMode: "vertical-rl" }}
             className="right-social-link"
+            isExternal
           >
             {emailLink}
           </Link>

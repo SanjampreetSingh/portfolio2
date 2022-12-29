@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { List, ListItem, Text, useMenu, useColorMode } from "@chakra-ui/react";
 import { createDescendantContext } from "@chakra-ui/descendant";
 import { useKeyPressEvent } from "react-use";
@@ -16,10 +16,16 @@ export const [
 ] = createDescendantContext();
 
 export default function ActionList(props) {
-  const { focusedIndex, setFocusedIndex, onClose, searchQuery } = props;
+  const {
+    focusedIndex,
+    setFocusedIndex,
+    onClose,
+    searchQuery,
+    setAction,
+    action,
+  } = props;
   const { descendants } = useMenu();
   const { colorMode, toggleColorMode } = useColorMode();
-  const [action, setAction] = useState(actionListData);
 
   const filterCommands = (query) => {
     setFocusedIndex(0);

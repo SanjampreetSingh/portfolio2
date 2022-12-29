@@ -1,3 +1,5 @@
+import { useCallback, useEffect, useState } from "react";
+import { useKeyPressEvent } from "react-use";
 import {
   Modal,
   ModalOverlay,
@@ -6,21 +8,27 @@ import {
   VStack,
   StackDivider,
 } from "@chakra-ui/react";
-import { useKeyPressEvent } from "react-use";
 
 import "./search.css";
 import ActionList from "../actionList/ActionList";
-import { useCallback, useState } from "react";
+import actionListData from "../../constants/actionListData";
 
 export default function Search(props) {
   const { isOpen, onClose, onOpen } = props;
   const [focusedIndex, setFocusedIndex] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
+  const [action, setAction] = useState(actionListData);
 
   const hideSearch = useCallback(() => {
     onClose();
     setFocusedIndex(0);
+    setAction(actionListData);
   }, [onClose, setFocusedIndex]);
+
+  useEffect(() => {
+    setAction(actionListData);
+    setSearchQuery("");
+  }, [isOpen]);
 
   useKeyPressEvent((e) => {
     if (!isOpen && e.key === "k" && (e.metaKey || e.ctrlKey)) {
@@ -74,6 +82,8 @@ export default function Search(props) {
             setFocusedIndex={setFocusedIndex}
             onClose={onClose}
             searchQuery={searchQuery}
+            setAction={setAction}
+            action={action}
           />
         </VStack>
       </ModalContent>

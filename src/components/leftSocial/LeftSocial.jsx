@@ -24,7 +24,7 @@ export default function LeftSocial() {
               </Link>
             </li>
           ))}
-          <Center height="40vh">
+          <Center height="30vh">
             <Divider
               orientation="vertical"
               className="left-social-hr"

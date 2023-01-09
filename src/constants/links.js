@@ -9,4 +9,4 @@ export const infosysLink = "https://www.infosys.com/";
 export const gndecLink = "https://www.gndec.ac.in/";
 export const emailLink = "sanjam531@gmail.com";
 export const resumeLink =
-  "https://drive.google.com/file/d/1L9L2BuC5fKacNmjJwJBGB8gR6WEj3GtU/view?usp=sharing";
+  "https://drive.google.com/file/d/19ZHOS1je3u2HA7U9XyrD7s2f_txp_sak/view?usp=sharing";

@@ -8,6 +8,7 @@ import {
   Image,
   useColorMode,
 } from "@chakra-ui/react";
+import { Link as RLink} from "react-router-dom";
 
 import socialLinkData from "../../../constants/socialLinkData";
 import pagesData from "../../../constants/pagesData";
@@ -43,7 +44,7 @@ export default function Footer() {
         />
         <Stack direction={"row"} spacing={6}>
           {pagesData.map((i) => (
-            <Link href={i.link} key={i.key}>
+            <Link as={RLink} to={i.link} key={i.key}>
               {i.title}
             </Link>
           ))}

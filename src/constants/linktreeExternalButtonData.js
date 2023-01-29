@@ -1,4 +1,4 @@
-import { instagramLink, linkedinLink, resumeLink } from "./links";
+import { instagramLink, linkedinLink, resumeLink, youtubeLink } from "./links";
 
 const linktreeExternalButtonData = [
   {
@@ -10,6 +10,11 @@ const linktreeExternalButtonData = [
     title: "Follow me on Instagram",
     key: "follow-me-on-instagram",
     link: instagramLink,
+  },
+  {
+    title: "Check my main YouTube Channel",
+    key: "check-my-main-you-tube-channel",
+    link: youtubeLink,
   },
   {
     title: "Check my resume",

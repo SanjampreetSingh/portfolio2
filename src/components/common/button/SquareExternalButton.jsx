@@ -1,21 +1,21 @@
-import { Icon, chakra, useColorModeValue } from "@chakra-ui/react";
+import { Button, Icon, useColorModeValue } from "@chakra-ui/react";
 import ICONS from "../../../constants/icons";
 
 export default function SquareExternalButton(props) {
   const { label, href } = props;
 
   return (
-    <chakra.button
+    <Button
       bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-      w={"full"}
+      w={"98%"}
+      mx="1%"
       rounded={"5"}
       h={"3rem"}
       cursor={"pointer"}
       as={"a"}
       href={href}
       target="_blank"
-      position={"relative"}
-      display={"inline-flex"}
+      display={"flex"}
       alignItems={"center"}
       justifyContent={"center"}
       transition={
@@ -24,11 +24,10 @@ export default function SquareExternalButton(props) {
       _hover={{
         bg: "#aeccec",
         color: "#000",
-        // top: "-10px",
       }}
+      rightIcon={<Icon as={ICONS.EXTERNAL_LINK} />}
     >
       {label}
-      <Icon as={ICONS.EXTERNAL_LINK} position={"absolute"} right={10} />
-    </chakra.button>
+    </Button>
   );
 }

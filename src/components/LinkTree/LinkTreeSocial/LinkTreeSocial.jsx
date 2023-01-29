@@ -1,10 +1,10 @@
-import { Stack, VStack } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 import socialLinkData from "../../../constants/socialLinkData";
 import RoundSocialButton from "../../common/button/RoundSocialButton";
 
 export default function LinkTreeSocial() {
   return (
-    <VStack as="section" flex={1} w="xl">
+    <>
       <Stack direction={"row"} spacing={6}>
         {socialLinkData.map((i) => (
           <RoundSocialButton
@@ -16,6 +16,6 @@ export default function LinkTreeSocial() {
           />
         ))}
       </Stack>
-    </VStack>
+    </>
   );
 }

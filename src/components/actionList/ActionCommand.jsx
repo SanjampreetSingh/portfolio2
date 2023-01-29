@@ -8,11 +8,13 @@ import {
 import { useEffect, useRef } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { BsArrowReturnLeft } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 import { useKeyPressEvent } from "react-use";
 
 export default function ActionCommand(props) {
   const { icon, title, onClick, href, activeIndex, onClose } = props;
   const ref = useRef();
+  const navigate = useNavigate();
   const isExternal = href && href.startsWith("http");
 
   const { register, index } = useMenuDescendant();
@@ -29,10 +31,9 @@ export default function ActionCommand(props) {
     if (href) {
       if (isExternal) {
         window.open(href, "blank");
+      } else {
+        navigate(href);
       }
-      // else {
-      //   router.push(href, href);
-      // }
     } else if (onClick) {
       onClick?.();
     }

@@ -25,6 +25,8 @@ export default function RoundSocialButton(props) {
         transition={"background 0.3s ease"}
         _hover={{
           bg: "#aeccec",
+          color: "#000",
+          transform: "scale(1.5)",
         }}
       >
         <VisuallyHidden>{label}</VisuallyHidden>

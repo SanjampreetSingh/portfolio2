@@ -24,6 +24,7 @@ export default function SquareExternalButton(props) {
       _hover={{
         bg: "#aeccec",
         color: "#000",
+        transform: "scale(1.2)",
       }}
       rightIcon={<Icon as={ICONS.EXTERNAL_LINK} />}
     >

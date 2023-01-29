@@ -1,7 +1,7 @@
 import { VStack } from "@chakra-ui/react";
 
 import SectionLayout from "../../components/common/layout/SectionLayout";
-import Introduction from "../../components/introduction/Introduction";
+import Introduction from "../../components/Home/introduction/Introduction";
 import { sectionsData } from "../../constants/sectionsData";
 
 export default function Main() {

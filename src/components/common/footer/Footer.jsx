@@ -9,11 +9,11 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 
-import socialLinkData from "../../constants/socialLinkData";
-import pagesData from "../../constants/pagesData";
-import RoundSocialButton from "../common/button/RoundSocialButton";
-import logoWt from "../../assets/images/logo-wt.webp";
-import logoDk from "../../assets/images/logo-dk.webp";
+import socialLinkData from "../../../constants/socialLinkData";
+import pagesData from "../../../constants/pagesData";
+import RoundSocialButton from "../button/RoundSocialButton";
+import logoWt from "../../../assets/images/logo-wt.webp";
+import logoDk from "../../../assets/images/logo-dk.webp";
 
 export default function Footer() {
   const { colorMode } = useColorMode();

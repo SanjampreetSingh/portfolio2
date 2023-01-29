@@ -11,7 +11,7 @@ import {
 
 import "./search.css";
 import ActionList from "../actionList/ActionList";
-import actionListData from "../../constants/actionListData";
+import actionListData from "../../../constants/actionListData";
 
 export default function Search(props) {
   const { isOpen, onClose, onOpen } = props;

@@ -17,7 +17,7 @@ const actionListData = [
   },
   {
     title: "YouTube",
-    key: "youtube",
+    key: "youtube-links",
     children: youtubeLinkData,
   },
   {

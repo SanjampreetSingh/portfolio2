@@ -1,8 +1,8 @@
 import { Container, VStack } from "@chakra-ui/react";
-import Header from "../components/header/Header";
-import LeftSocial from "../components/leftSocial/LeftSocial";
-import RightSocial from "../components/rightEmail/RightSocial";
-import Footer from "../components/footer/Footer";
+import Header from "../components/common/header/Header";
+import LeftSocial from "../components/common/leftSocial/LeftSocial";
+import RightSocial from "../components/common/rightEmail/RightSocial";
+import Footer from "../components/common/footer/Footer";
 
 export default function MainLayout(props) {
   const { Children } = props;

@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 
 import "./leftSocial.css";
-import socialLinkData from "../../constants/socialLinkData";
+import socialLinkData from "../../../constants/socialLinkData";
 
 export default function LeftSocial() {
   return (

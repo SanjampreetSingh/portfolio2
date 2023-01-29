@@ -10,9 +10,9 @@ import {
   Icon,
 } from "@chakra-ui/react";
 
-import profilePic from "../../assets/images/profile-pic.webp";
-import ICONS from "../../constants/icons";
-import { bcgXLink } from "../../constants/links";
+import profilePic from "../../../assets/images/profile-pic.webp";
+import ICONS from "../../../constants/icons";
+import { bcgXLink } from "../../../constants/links";
 
 export default function Introduction() {
   return (

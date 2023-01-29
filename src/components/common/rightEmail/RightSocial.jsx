@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 
 import "./rightSocial.css";
-import { emailLink } from "../../constants/links";
+import { emailLink } from "../../../constants/links";
 
 export default function RightSocial() {
   return (

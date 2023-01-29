@@ -6,8 +6,8 @@ import {
   Grid,
   GridItem,
 } from "@chakra-ui/react";
-import skillsListData from "../../constants/skillsListData";
-import RoundSocialButton from "../common/button/RoundSocialButton";
+import skillsListData from "../../../constants/skillsListData";
+import RoundSocialButton from "../../common/button/RoundSocialButton";
 
 export default function Skills() {
   return skillsListData.map((s) => (

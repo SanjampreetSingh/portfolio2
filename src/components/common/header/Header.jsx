@@ -11,10 +11,10 @@ import {
 } from "@chakra-ui/react";
 import { BsCommand } from "react-icons/bs";
 
-import Search from "../search/Search";
+import Search from "./../search/Search";
 import "./header.css";
-import logoWt from "../../assets/images/logo-wt.webp";
-import logoDk from "../../assets/images/logo-dk.webp";
+import logoWt from "../../../assets/images/logo-wt.webp";
+import logoDk from "../../../assets/images/logo-dk.webp";
 
 export default function Header() {
   const { colorMode } = useColorMode();

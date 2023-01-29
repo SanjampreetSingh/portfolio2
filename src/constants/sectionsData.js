@@ -1,6 +1,6 @@
-import Education from "../components/education/Education";
-import Experience from "../components/experience/Experience";
-import Skills from "../components/skills/Skills";
+import Education from "../components/Home/education/Education";
+import Experience from "../components/Home/experience/Experience";
+import Skills from "../components/Home/skills/Skills";
 
 export const sectionsData = [
   {

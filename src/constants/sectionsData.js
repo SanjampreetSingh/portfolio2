@@ -1,5 +1,6 @@
 import Education from "../components/Home/education/Education";
 import Experience from "../components/Home/experience/Experience";
+import Projects from "../components/Home/projects/Projects";
 import Skills from "../components/Home/skills/Skills";
 
 export const sectionsData = [
@@ -12,6 +13,11 @@ export const sectionsData = [
     title: "Skills",
     subtitle: "The things I've worked with.",
     component: Skills,
+  },
+  {
+    title: "Projects",
+    subtitle: "The Things I have built.",
+    component: Projects,
   },
   {
     title: "Education",

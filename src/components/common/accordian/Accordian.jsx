@@ -46,6 +46,9 @@ export default function Accordian(props) {
             }
             onMouseEnter={() => handleOpen(i.key)}
             onMouseLeave={handleClose}
+            transition={
+              "background 0.3s ease, top 0.5s ease, box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;"
+            }
           >
             <VStack w="full" spacing="0" align="stretch" p="3">
               <Box
@@ -92,7 +95,13 @@ export default function Accordian(props) {
             </VStack>
           </HStack>
           {openedDesc === i.key && (
-            <SlideFade in={isOpen && openedDesc === i.key} unmountOnExit>
+            <SlideFade
+              in={isOpen && openedDesc === i.key}
+              transition={
+                "background 0.3s ease, top 0.5s ease, box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;"
+              }
+              unmountOnExit
+            >
               <Box
                 w="full"
                 p="5"

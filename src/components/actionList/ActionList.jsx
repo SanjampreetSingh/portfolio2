@@ -75,6 +75,19 @@ export default function ActionList(props) {
             href={link}
           />
         );
+      } else if (section === "youtube") {
+        const { key, title, link, icon } = command;
+
+        return (
+          <ActionCommand
+            onClose={onClose}
+            activeIndex={activeIndex}
+            key={key}
+            title={title}
+            icon={icon}
+            href={link}
+          />
+        );
       } else if (section === "theme") {
         const { title, key } = command;
 

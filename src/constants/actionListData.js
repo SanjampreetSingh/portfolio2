@@ -2,6 +2,7 @@ import ICONS from "./icons";
 import { resumeLink } from "./links";
 import pagesData from "./pagesData";
 import socialLinkData from "./socialLinkData";
+import youtubeLinkData from "./youtubeLinkData";
 
 const actionListData = [
   {
@@ -13,6 +14,11 @@ const actionListData = [
     title: "Social",
     key: "social",
     children: socialLinkData,
+  },
+  {
+    title: "YouTube",
+    key: "youtube",
+    children: youtubeLinkData,
   },
   {
     title: "Theme",

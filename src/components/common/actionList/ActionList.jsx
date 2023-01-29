@@ -75,7 +75,7 @@ export default function ActionList(props) {
             href={link}
           />
         );
-      } else if (section === "youtube") {
+      } else if (section === "youtube-links") {
         const { key, title, link, icon } = command;
 
         return (

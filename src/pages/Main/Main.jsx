@@ -6,16 +6,18 @@ import { sectionsData } from "../../constants/sectionsData";
 
 export default function Main() {
   return (
-    <VStack as="main" flex={1} w="full" spacing="24">
-      <Introduction />
-      {sectionsData.map((i, k) => (
-        <SectionLayout
-          key={k}
-          heading={i.title}
-          subheading={i.subtitle}
-          section={<i.component />}
-        />
-      ))}
+    <VStack alignItems="stretch" flex={1} w="full" spacing={16}>
+      <VStack as="main" flex={1} w="full" spacing="24">
+        <Introduction />
+        {sectionsData.map((i, k) => (
+          <SectionLayout
+            key={k}
+            heading={i.title}
+            subheading={i.subtitle}
+            section={<i.component />}
+          />
+        ))}
+      </VStack>
     </VStack>
   );
 }

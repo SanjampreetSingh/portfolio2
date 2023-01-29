@@ -7,9 +7,9 @@ import {
 } from "@chakra-ui/react";
 
 export default function RoundSocialButton(props) {
-  const { icon, label, href, disableToolTip} = props;
+  const { icon, label, href, disableToolTip } = props;
   return (
-    <Tooltip isDisabled={disableToolTip} label={label} hasArrow>
+    <Tooltip isDisabled={disableToolTip} label={label} hasArrow >
       <chakra.button
         bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
         rounded={"full"}

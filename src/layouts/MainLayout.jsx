@@ -1,4 +1,4 @@
-import { Container, VStack } from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
 import Header from "../components/common/header/Header";
 import LeftSocial from "../components/common/leftSocial/LeftSocial";
 import RightSocial from "../components/common/rightEmail/RightSocial";
@@ -19,9 +19,7 @@ export default function MainLayout(props) {
         minH={{ base: "auto", md: "100vh" }}
         centerContent
       >
-        <VStack alignItems="stretch" flex={1} w="full" spacing={16}>
-          <Children />
-        </VStack>
+        <Children />
       </Container>
       <Container maxW="5xl">
         <Footer />

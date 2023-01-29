@@ -13,8 +13,13 @@ const linktreeExternalButtonData = [
   },
   {
     title: "Check my main YouTube Channel",
-    key: "check-my-main-you-tube-channel",
+    key: "check-my-main-youtube-channel",
     link: youtubeLink,
+  },
+  {
+    title: "Check my latest YouTube video",
+    key: "check-my-latest-youtube-video",
+    link: "https://youtu.be/AodXbe8cHno",
   },
   {
     title: "Check my resume",

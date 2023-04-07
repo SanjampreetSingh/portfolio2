@@ -1,6 +1,12 @@
 import educationData from "../../../constants/educationData";
-import Accordian from "../../common/accordian/Accordian";
+import Accordion from "../../common/accordion/Accordion";
 
 export default function Education() {
-  return <Accordian data={educationData} />;
+  return (
+    <>
+      {educationData?.map((education) => (
+        <Accordion key={education?.id} {...education} />
+      ))}
+    </>
+  );
 }

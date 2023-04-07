@@ -2,7 +2,7 @@ import { accentureLink, bcgXLink, infosysLink } from "./links";
 
 const experienceData = [
   {
-    key: 1,
+    id: 1,
     title: "Boston Consulting Group - X",
     timeline: "April 2022 - Present",
     link: bcgXLink,
@@ -11,7 +11,7 @@ const experienceData = [
     data: ["I work as a full stack developer in BCG's technology division."],
   },
   {
-    key: 2,
+    id: 2,
     title: "Accenture",
     timeline: "November 2019 - March 2022",
     link: accentureLink,
@@ -25,7 +25,7 @@ const experienceData = [
     ],
   },
   {
-    key: 3,
+    id: 3,
     title: "Infosys",
     timeline: "January 2019 - April 2019",
     link: infosysLink,

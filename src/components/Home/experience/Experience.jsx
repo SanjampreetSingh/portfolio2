@@ -1,6 +1,12 @@
 import experienceData from "../../../constants/experienceData";
-import Accordian from "../../common/accordian/Accordian";
+import Accordion from "../../common/accordion/Accordion";
 
 export default function Experience() {
-  return <Accordian data={experienceData} />;
+  return (
+    <>
+      {experienceData?.map((experience) => (
+        <Accordion key={experience?.id} {...experience} />
+      ))}
+    </>
+  );
 }

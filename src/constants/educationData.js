@@ -2,7 +2,7 @@ import { gndecLink } from "./links";
 
 const educationData = [
   {
-    key: 1,
+    id: 1,
     title: "Guru Nanak Dev Engineering College",
     timeline: "July 2015 - May 2019",
     link: gndecLink,

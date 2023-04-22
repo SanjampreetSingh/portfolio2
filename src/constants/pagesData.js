@@ -8,6 +8,12 @@ const pagesData = [
     link: urlLinkData.home,
   },
   {
+    title: "Blog",
+    key: "blog",
+    icon: "home",
+    link: urlLinkData.blog,
+  },
+  {
     title: "Link Tree",
     key: "link-tree",
     icon: "home",

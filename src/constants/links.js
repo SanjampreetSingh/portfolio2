@@ -12,8 +12,10 @@ export const infosysLink = "https://www.infosys.com/";
 export const gndecLink = "https://www.gndec.ac.in/";
 export const emailLink = "sanjam531@gmail.com";
 export const resumeLink =
-"https://drive.google.com/file/d/19ZHOS1je3u2HA7U9XyrD7s2f_txp_sak/view?usp=sharing";
+  "https://drive.google.com/file/d/19ZHOS1je3u2HA7U9XyrD7s2f_txp_sak/view?usp=sharing";
 //  YouTube Channel Links
-export const mainChannelYTLink = "https://www.youtube.com/@sanjampreet-singh/"
-export const kirtanChannelYTLink = "https://www.youtube.com/@SanjampreetSingh/"
+export const mainChannelYTLink = "https://www.youtube.com/@sanjampreet-singh/";
+export const kirtanChannelYTLink = "https://www.youtube.com/@SanjampreetSingh/";
 export const codingChannelYTLink = "https://www.youtube.com/@CodeSanjam";
+// Dev.to API
+export const devToAPI = "https://dev.to/api/articles?username=sanjampreetsingh";

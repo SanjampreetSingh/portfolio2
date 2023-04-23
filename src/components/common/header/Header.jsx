@@ -10,6 +10,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { BsCommand } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 import Search from "./../search/Search";
 import "./header.css";
@@ -38,14 +39,16 @@ export default function Header() {
         >
           <Search isOpen={isOpen} onClose={onClose} onOpen={onOpen} />
           <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-            <Image
-              src={logo}
-              boxSize="8"
-              w="100"
-              objectFit="fill"
-              loading="lazy"
-              alt="Sanjam Dev logo"
-            />
+            <Link to="/">
+              <Image
+                src={logo}
+                boxSize="8"
+                w="100"
+                objectFit="fill"
+                loading="lazy"
+                alt="Sanjam Dev logo"
+              />
+            </Link>
             <Flex alignItems={"center"}>
               <Stack direction={"row"} spacing={7}>
                 <Tooltip label={`Command Palette (${shortcut})`} hasArrow>

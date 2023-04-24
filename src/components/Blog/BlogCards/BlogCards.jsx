@@ -26,7 +26,12 @@ export default function BlogCards() {
   const { colorMode } = useColorMode();
 
   useEffect(() => {
-    fetch(devToAPI)
+    fetch(devToAPI, {
+      method: "GET",
+      headers: {
+        Accept: "application/vnd.forem.api-v1+json",
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
         setArticles(data);

@@ -28,9 +28,10 @@ export default function BlogCards() {
   useEffect(() => {
     fetch(devToAPI)
       .then((res) => res.json())
-      .then((res) => {
-        setArticles(res);
-      });
+      .then((data) => {
+        setArticles(data);
+      })
+      .catch((error) => console.log(error.message));
   }, []);
 
   return (
@@ -110,7 +111,7 @@ export default function BlogCards() {
                             : "white"
                         }
                       >
-                        {tag}
+                        #{tag}
                       </Tag>
                     ))}
                   </div>

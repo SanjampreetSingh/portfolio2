@@ -46,16 +46,16 @@ export default function BlogCards() {
             <Box
               overflow="hidden"
               boxShadow="lg"
-              padding="2"
+              padding="3"
               bg={useColorModeValue("", "whiteAlpha.100")}
               key={i}
-              w="100%"
+              w="3xl"
             >
               <Stack direction={{ base: "column" }}>
-                <Skeleton height="20" maxW={{ base: "100%" }} />
+                <Skeleton height="32" maxW={{ base: "100%" }} />
                 <SkeletonText
                   mt="4"
-                  noOfLines={2}
+                  noOfLines={3}
                   spacing="2"
                   skeletonHeight="2"
                 />

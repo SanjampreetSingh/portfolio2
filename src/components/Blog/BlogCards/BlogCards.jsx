@@ -29,6 +29,7 @@ export default function BlogCards() {
     fetch(devToAPI, {
       method: "GET",
       headers: {
+        origin: "http://localhost:3000",
         Accept: "application/vnd.forem.api-v1+json",
       },
     })

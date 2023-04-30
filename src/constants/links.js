@@ -18,4 +18,5 @@ export const mainChannelYTLink = "https://www.youtube.com/@sanjampreet-singh/";
 export const kirtanChannelYTLink = "https://www.youtube.com/@SanjampreetSingh/";
 export const codingChannelYTLink = "https://www.youtube.com/@CodeSanjam";
 // Dev.to API
-export const devToAPI = "https://dev.to/api/articles/?username=sanjampreetsingh&state=all";
+export const devToAPI =
+  "https://dev.to/api/articles/?username=sanjampreetsingh&state=all&per_page=3";

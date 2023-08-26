@@ -16,15 +16,16 @@ import {
 
 import ICONS from "../../../constants/icons";
 
-export default function BlogCards({
-  url,
-  title,
-  tag_list,
-  description,
-  social_image,
-  readable_publish_date,
-}) {
+export default function BlogCards({ data }) {
   const { colorMode } = useColorMode();
+  const {
+    url,
+    title,
+    tag_list,
+    description,
+    social_image,
+    readable_publish_date,
+  } = data;
 
   return (
     <Card

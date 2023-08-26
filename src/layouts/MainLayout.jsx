@@ -4,8 +4,7 @@ import LeftSocial from "../components/common/leftSocial/LeftSocial";
 import RightSocial from "../components/common/rightEmail/RightSocial";
 import Footer from "../components/common/footer/Footer";
 
-export default function MainLayout(props) {
-  const { Children } = props;
+export default function MainLayout({ Children }) {
   return (
     <>
       <Container maxW="5xl">

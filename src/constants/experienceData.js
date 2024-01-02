@@ -3,12 +3,12 @@ import { accentureLink, bcgXLink, infosysLink } from "./links";
 const experienceData = [
   {
     id: 1,
-    title: "Boston Consulting Group - X",
+    title: "Boston Consulting Group",
     timeline: "April 2022 - Present",
     link: bcgXLink,
     subtitle: "Senior Software Engineer",
     description:
-      "At BCG X as a Senior Software Engineer, I work at company's Gurugram offices in India.",
+      "At BCG as a Senior Software Engineer, I work at company's Gurgaon offices in India.",
     data: ["I work as a full stack developer in BCG's technology division."],
   },
   {
@@ -18,7 +18,7 @@ const experienceData = [
     link: accentureLink,
     subtitle: "Software Engineer",
     description:
-      "At Accenture as a Software Engineer, I worked at company's Bangaluru offices in India.",
+      "At Accenture as a Software Engineer, I worked at company's Bangalore offices in India.",
     data: [
       "Developed software as a full stack developer for the Technology for Operations (Tfo) team.",
       "In the delivery of projects created from scratch, used the agile principle and Azure DevOps tools.",
@@ -32,7 +32,7 @@ const experienceData = [
     link: infosysLink,
     subtitle: "Software Engineer Intern",
     description:
-      "At Infosys as an Intern, I worked within the company's best training facilities in Mysuru, India.",
+      "At Infosys as an Intern, I worked within the company's best training facilities in Mysore, India.",
     data: [
       "Scored above 90% in and cleared all knowledge tests like python, web technologies etc. during internship.",
       "Had a placement offer from Infosys, created an e-commerce web app using Angular in team as minor project.",

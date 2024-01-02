@@ -40,9 +40,9 @@ export default function Introduction() {
           I&apos;m full-stack developer, a designer, and a content creator. I
           work at{" "}
           <Link href={bcgXLink} isExternal>
-            BCG X<Icon as={ICONS.EXTERNAL_LINK} mx="2px" />
+            BCG<Icon as={ICONS.EXTERNAL_LINK} mx="2px" />
           </Link>{" "}
-          as a Software Engineer.
+          as a Senior Software Engineer.
           <br />
           I am passionate for creating things. I love to build and develop
           software that help society. <br />

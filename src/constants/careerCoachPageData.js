@@ -12,7 +12,7 @@ export const careerCoachPageData = {
   about: {
     title: "About Coach Sanjam",
     subtitle: "Your Career Growth Partner",
-    bio: "As a certified career coach, I am dedicated to helping you navigate the complexities of the modern job market. I provide personalized guidance and proven strategies to help you achieve your career goals. Whether you're a recent graduate or an experienced professional looking for a change, I'm here to support you on your journey to success.",
+    bio: "As a career coach, I am dedicated to helping you navigate the complexities of the modern work environment. I provide personalized guidance and proven strategies to help you achieve your career goals. Whether you're a recent graduate or an experienced professional looking for a solution, I'm here to support you on your journey to success.",
   },
   services: {
     title: "How I Can Help You",

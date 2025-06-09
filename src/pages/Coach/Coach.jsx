@@ -5,16 +5,17 @@ import {
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
-import { useRef } from "react";
+import { forwardRef, useRef } from "react";
 import ServiceCard from "../../components/Coach/service-cards/ServiceCard.jsx";
 import Title from "../../components/Coach/title/Title.jsx";
 import SectionLayout from "../../components/common/layout/SectionLayout.jsx";
 import { careerCoachPageData } from "../../constants/careerCoachPageData";
 import ScrollDownButton from "../../components/Coach/scroll-button/ScrollDownButton.jsx";
 
-const FullScreenSection = ({ children, ...props }) => (
+const FullScreenSection = forwardRef(({ children, height, ...props }, ref) => (
   <Flex
-    h="85vh"
+    ref={ref}
+    h={height ?? "100vh"}
     w="full"
     position="relative"
     scrollSnapAlign="start"
@@ -24,12 +25,14 @@ const FullScreenSection = ({ children, ...props }) => (
   >
     {children}
   </Flex>
-);
+));
+
+FullScreenSection.displayName = "FullScreenSection";
 
 export default function Coach() {
   const { title, about, services } = careerCoachPageData;
   const aboutRef = useRef(null);
-  // const servicesRef = useRef(null);
+  const servicesRef = useRef(null);
   // const testimonialsRef = useRef(null);
 
   const handleScrollDown = (ref) => {
@@ -38,7 +41,7 @@ export default function Coach() {
 
   return (
     <VStack alignItems="stretch" flex={1} w="full" spacing={0}>
-      <FullScreenSection id="hero">
+      <FullScreenSection id="title" height="85vh">
         <Title {...title} />
         <ScrollDownButton onClick={() => handleScrollDown(aboutRef)} />
       </FullScreenSection>
@@ -69,33 +72,36 @@ export default function Coach() {
             </SimpleGrid>
           }
         />
+        <ScrollDownButton onClick={() => handleScrollDown(servicesRef)} />
       </FullScreenSection>
 
-      <SectionLayout
-        heading={services.title}
-        subheading={services.subtitle}
-        section={
-          <SimpleGrid
-            columns={{ base: 1, md: 3 }}
-            spacing={10}
-            w="full"
-            maxW="7xl"
-            mx="auto"
-            py={{ base: 12, md: 24 }}
-            px={{ base: 6, md: 10 }}
-          >
-            {services.items.map((service, index) => (
-              <ServiceCard
-                key={index}
-                icon={service.icon}
-                title={service.title}
-                description={service.description}
-                features={service.features}
-              />
-            ))}
-          </SimpleGrid>
-        }
-      ></SectionLayout>
+      <FullScreenSection id="about" ref={servicesRef}>
+        <SectionLayout
+          heading={services.title}
+          subheading={services.subtitle}
+          section={
+            <SimpleGrid
+              columns={{ base: 1, md: 3 }}
+              spacing={10}
+              w="full"
+              maxW="7xl"
+              mx="auto"
+              py={{ base: 6, md: 18 }}
+              px={{ base: 6, md: 10 }}
+            >
+              {services.items.map((service, index) => (
+                <ServiceCard
+                  key={index}
+                  icon={service.icon}
+                  title={service.title}
+                  description={service.description}
+                  features={service.features}
+                />
+              ))}
+            </SimpleGrid>
+          }
+        />
+      </FullScreenSection>
 
       {/* <SectionLayout
         heading={testimonials.title}

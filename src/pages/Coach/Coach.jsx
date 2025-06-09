@@ -12,13 +12,13 @@ import Title from "../../components/Coach/title/Title.jsx";
 import SectionLayout from "../../components/common/layout/SectionLayout.jsx";
 import { careerCoachPageData } from "../../constants/careerCoachPageData.js";
 
-const FullScreenSection = forwardRef(({ children, height, ...props }, ref) => (
+const FullScreenSection = forwardRef(({ children, minH, ...props }, ref) => (
   <Flex
     ref={ref}
-    h={height ?? "100vh"}
+    minHeight={minH ?? { base: "auto", md: "100vh" }}
+    py={{ base: 20, md: 0 }}
     w="full"
     position="relative"
-    scrollSnapAlign="start"
     alignItems="center"
     justifyContent="center"
     {...props}
@@ -41,7 +41,7 @@ export default function Coach() {
 
   return (
     <VStack alignItems="stretch" flex={1} w="full" spacing={0}>
-      <FullScreenSection id="title" height="85vh">
+      <FullScreenSection id="title" minH={{ base: "80vh", md: "85vh" }}>
         <Title {...title} />
         <ScrollDownButton onClick={() => handleScrollDown(aboutRef)} />
       </FullScreenSection>
@@ -51,15 +51,7 @@ export default function Coach() {
           heading={about.title}
           subheading={about.subtitle}
           section={
-            <SimpleGrid
-              columns={{ base: 1 }}
-              spacing={10}
-              w="full"
-              maxW="7xl"
-              mx="auto"
-              py={{ base: 12, md: 24 }}
-              px={{ base: 6, md: 10 }}
-            >
+            <SimpleGrid columns={{ base: 1 }} spacing={10} w="full">
               <Text
                 fontSize="lg"
                 maxW="3xl"
@@ -86,7 +78,6 @@ export default function Coach() {
               w="full"
               maxW="7xl"
               mx="auto"
-              py={{ base: 6, md: 18 }}
               px={{ base: 6, md: 10 }}
             >
               {services.items.map((service, index) => (
@@ -104,9 +95,9 @@ export default function Coach() {
         {/* <ScrollDownButton onClick={() => handleScrollDown(testimonialsRef)} /> */}
       </FullScreenSection>
 
-      {/* <FullScreenSection id="testimonials" ref={testimonialsRef}> */}
-      {/* <Text>Testimonials Section</Text> */}
-      {/* </FullScreenSection> */}
+      {/* <FullScreenSection id="testimonials" ref={testimonialsRef}>
+        <Text>Testimonials Section</Text>
+      </FullScreenSection> */}
     </VStack>
   );
 }

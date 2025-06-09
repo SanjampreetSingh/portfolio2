@@ -6,11 +6,11 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { forwardRef, useRef } from "react";
+import ScrollDownButton from "../../components/Coach/scroll-button/ScrollDownButton.jsx";
 import ServiceCard from "../../components/Coach/service-cards/ServiceCard.jsx";
 import Title from "../../components/Coach/title/Title.jsx";
 import SectionLayout from "../../components/common/layout/SectionLayout.jsx";
-import { careerCoachPageData } from "../../constants/careerCoachPageData";
-import ScrollDownButton from "../../components/Coach/scroll-button/ScrollDownButton.jsx";
+import { careerCoachPageData } from "../../constants/careerCoachPageData.js";
 
 const FullScreenSection = forwardRef(({ children, height, ...props }, ref) => (
   <Flex
@@ -75,7 +75,7 @@ export default function Coach() {
         <ScrollDownButton onClick={() => handleScrollDown(servicesRef)} />
       </FullScreenSection>
 
-      <FullScreenSection id="about" ref={servicesRef}>
+      <FullScreenSection id="services" ref={servicesRef}>
         <SectionLayout
           heading={services.title}
           subheading={services.subtitle}
@@ -101,18 +101,12 @@ export default function Coach() {
             </SimpleGrid>
           }
         />
+        {/* <ScrollDownButton onClick={() => handleScrollDown(testimonialsRef)} /> */}
       </FullScreenSection>
 
-      {/* <SectionLayout
-        heading={testimonials.title}
-        subheading={testimonials.subtitle}
-      >
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-          {testimonials.items.map((testimonial, index) => (
-            <TestimonialCard key={index} {...testimonial} />
-          ))}
-        </SimpleGrid>
-      </SectionLayout> */}
+      {/* <FullScreenSection id="testimonials" ref={testimonialsRef}> */}
+      {/* <Text>Testimonials Section</Text> */}
+      {/* </FullScreenSection> */}
     </VStack>
   );
 }

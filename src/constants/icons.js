@@ -15,7 +15,7 @@ import {
   IoRocketOutline,
   IoCheckmark,
 } from "react-icons/io5";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaArrowDown } from "react-icons/fa";
 import { CgArrowRight } from "react-icons/cg";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { AiOutlineConsoleSql } from "react-icons/ai";
@@ -60,6 +60,7 @@ const ICONS = {
   ROCKET: IoRocketOutline,
   CHECKMARK: IoCheckmark,
   ARROW_RIGHT: FaArrowRight,
+  ARROW_DOWN: FaArrowDown,
 };
 
 export default ICONS;

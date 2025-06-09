@@ -5,7 +5,7 @@ export const careerCoachPageData = {
   title: {
     headline: "Unlock Your Career Potential",
     subheadline:
-      "I help professionals like you land their dream jobs, negotiate better salaries, and build a career they love.",
+      "I help professionals like you land their dream jobs, negotiate better salaries and build a career they love.",
     ctaButton: "Schedule a Free Discovery Call",
     image: coachProfile,
   },

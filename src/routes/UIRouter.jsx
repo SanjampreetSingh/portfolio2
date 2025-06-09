@@ -1,10 +1,11 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
-import MainLayout from "../layouts/MainLayout";
-import Main from "../pages/Main/Main";
-import LinkTree from "../pages/LinkTree/LinkTree";
-import Blog from "../pages/Blog/Blog";
 import { urlLinkData } from "../constants/urlLinkData";
+import MainLayout from "../layouts/MainLayout";
+import Blog from "../pages/Blog/Blog";
+import Coach from "../pages/Coach/Coach";
+import LinkTree from "../pages/LinkTree/LinkTree";
+import Main from "../pages/Main/Main";
 
 export default function UIRouter() {
   return (
@@ -15,6 +16,10 @@ export default function UIRouter() {
       />
       <Route path={urlLinkData.blog} element={<MainLayout Children={Blog} />} />
       <Route path={urlLinkData.home} element={<MainLayout Children={Main} />} />
+      <Route
+        path={urlLinkData.coach}
+        element={<MainLayout Children={Coach} />}
+      />
       <Route path="*" element={<Navigate to={urlLinkData.home} replace />} />
     </Routes>
   );

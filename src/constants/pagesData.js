@@ -19,6 +19,12 @@ const pagesData = [
     icon: "home",
     link: urlLinkData.linkTree,
   },
+  {
+    title: "Coach",
+    key: "coach",
+    icon: "home",
+    link: urlLinkData.coach,
+  },
 ];
 
 export default pagesData;

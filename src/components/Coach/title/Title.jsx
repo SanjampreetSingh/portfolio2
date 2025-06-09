@@ -8,7 +8,13 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
-export default function Title({ headline, subheadline, ctaButton, image }) {
+export default function Title({
+  headline,
+  subheadline,
+  ctaButton,
+  image,
+  ctaLink,
+}) {
   return (
     <Flex
       direction={{ base: "column-reverse", md: "row" }}
@@ -38,7 +44,16 @@ export default function Title({ headline, subheadline, ctaButton, image }) {
         >
           {subheadline}
         </Text>
-        <Button colorScheme="teal" size="lg" px={8} py={6}>
+        <Button
+          as="a"
+          href={ctaLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          colorScheme="teal"
+          size="lg"
+          px={8}
+          py={6}
+        >
           {ctaButton}
         </Button>
       </VStack>

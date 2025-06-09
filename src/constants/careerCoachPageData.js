@@ -1,5 +1,6 @@
 import coachProfile from "../assets/images/coach-profile.png";
 import ICONS from "./icons";
+import { callToActionLink } from "./links";
 
 export const careerCoachPageData = {
   title: {
@@ -8,6 +9,7 @@ export const careerCoachPageData = {
       "I help professionals like you land their dream jobs, negotiate better salaries and build a career they love.",
     ctaButton: "Schedule a Free Discovery Call",
     image: coachProfile,
+    ctaLink: callToActionLink,
   },
   about: {
     title: "About Coach Sanjam",
@@ -61,7 +63,7 @@ export const careerCoachPageData = {
         name: "Client Name",
         story:
           "Sanjam's guidance was a game-changer for my job search. I landed my dream job within a month of working with him!",
-        image: "/path/to/your/client-image.jpg", 
+        image: "/path/to/your/client-image.jpg",
       },
     ],
   },

@@ -20,3 +20,5 @@ export const codingChannelYTLink = "https://www.youtube.com/@CodeSanjam";
 // Dev.to API
 export const devToAPI =
   "https://dev.to/api/articles/?username=sanjampreetsingh&state=all";
+// Call to action link
+export const callToActionLink = "https://forms.gle/hC7569jreZFAU7856";

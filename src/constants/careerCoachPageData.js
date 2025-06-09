@@ -1,4 +1,5 @@
 import coachProfile from "../assets/images/coach-profile.png";
+import ICONS from "./icons";
 
 export const careerCoachPageData = {
   title: {
@@ -21,19 +22,34 @@ export const careerCoachPageData = {
         title: "Resume & LinkedIn Optimization",
         description:
           "Craft a compelling resume and a powerful LinkedIn profile that gets you noticed by recruiters.",
-        icon: "📄",
+        features: [
+          "ATS-optimized resume formatting",
+          "Achievement-focused content",
+          "LinkedIn & Naukri profile optimization",
+        ],
+        icon: ICONS.DOCUMENT_TEXT,
       },
       {
         title: "Interview Preparation",
         description:
           "Gain the confidence and skills to ace your interviews and land the job offer.",
-        icon: "💬",
+        features: [
+          "Mock interview sessions",
+          "Behavioral question strategies",
+          "Salary negotiation tactics",
+        ],
+        icon: ICONS.CHAT_BUBBLES,
       },
       {
         title: "Career Transition Strategy",
         description:
           "Get a clear roadmap for a successful career change, from exploring new options to making a smooth transition.",
-        icon: "🚀",
+        features: [
+          "Skills gap analysis",
+          "Industry transition planning",
+          "Personal branding strategy",
+        ],
+        icon: ICONS.ROCKET,
       },
     ],
   },
@@ -45,9 +61,8 @@ export const careerCoachPageData = {
         name: "Client Name",
         story:
           "Sanjam's guidance was a game-changer for my job search. I landed my dream job within a month of working with him!",
-        image: "/path/to/your/client-image.jpg", // Replace with your image
+        image: "/path/to/your/client-image.jpg", 
       },
-      // Add more testimonials here
     ],
   },
 };

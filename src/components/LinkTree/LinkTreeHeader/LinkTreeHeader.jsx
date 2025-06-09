@@ -19,7 +19,8 @@ export default function LinkTreeHeader() {
         alt="Sanjam Dev logo"
       />
       <Text fontSize="xl" marginBottom="2rem !important">
-        Fullstack Developer | Content Creator | Kirtaniya | Turbanator
+        Software Developer | Career Coach | Content Creator | Kirtaniya |
+        Turbanator
       </Text>
     </>
   );

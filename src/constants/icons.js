@@ -10,7 +10,12 @@ import {
   IoLogoPython,
   IoLogoJavascript,
   IoLogoCss3,
+  IoDocumentTextOutline,
+  IoChatbubblesOutline,
+  IoRocketOutline,
+  IoCheckmark,
 } from "react-icons/io5";
+import { FaArrowRight } from "react-icons/fa";
 import { CgArrowRight } from "react-icons/cg";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { AiOutlineConsoleSql } from "react-icons/ai";
@@ -50,6 +55,11 @@ const ICONS = {
   DOCKER: DiDocker,
   GIT: DiGit,
   RESUME: TiDocumentText,
+  DOCUMENT_TEXT: IoDocumentTextOutline,
+  CHAT_BUBBLES: IoChatbubblesOutline,
+  ROCKET: IoRocketOutline,
+  CHECKMARK: IoCheckmark,
+  ARROW_RIGHT: FaArrowRight,
 };
 
 export default ICONS;
